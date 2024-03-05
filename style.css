@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap&family=Fjalla+One&display=swap');
+
+:root{
+    --green00: #d7e3af;
+    --green01: #c8eb54;
+    --green02: #88994d;
+    --green03: #384310;
+    --purple01: rgba(150, 102, 173, 0.2);
+    --purple02: #9666ad;
+    --purple03: #541d70;
+    --purple04: #381c47;    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;    
+    text-decoration: none;
+    font-family: "Source Sans 3", sans-serif;    
+}
+
+body{
+    background-image: linear-gradient(to top, var(--purple04) , var(--purple03)); 
+    display: flex;
+    flex-direction: column;    
+}
+
+#nome{
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 7px;    
+}
+
+header{
+    background: rgba(150, 102, 173, 0.2);      
+    margin-top: 20px;
+}
+#divdoheader{    
+    margin-left: auto;
+    margin-right: auto;        
+    color: var(--green01);  
+    display: flex;
+    flex-flow: row wrap;  
+    justify-content: space-around;              
+    padding: 10px;        
+}
+
+header a{
+    color: var(--green01);       
+    font-size: 1.5em;
+    font-family: "Outfit", sans-serif;    
+}
+
+header ul{
+    list-style: none;
+    display: flex;        
+    column-gap: 5%;
+    justify-content: center;        
+}
+
+#sobre{
+    color: var(--green00);
+}
+
+p{
+    text-indent: 20px;
+    line-height: 1.5em;
+    text-align: justify;
+    padding: 5px;
+}
+
+.header1{
+    color: var(--green01);
+    font-size: 4em;
+    font-family: "Fjalla One", sans-serif;
+}
+
+.content{
+    font-size: 2em;
+    font-family: "Outfit", sans-serif;
+    color: var(--green01);       
+}
+
+#portfolionavblock{
+    background-color: var(--purple04);
+}
+
+#portfoliolist>li{
+    color:var(--green01);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Outfit", sans-serif;
+}
+
+#curriculoimage{
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px #0000008f);
+}
+
+#pdfcurriculo{
+    color: var(--green01);
+    font-size: 24px;    
+}
+
+footer{
+    background-color: var(--purple01);
+}
+address>a{
+    text-decoration: none;
+    color: var(--green00);
+    font-size: 21px;
+}
