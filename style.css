@@ -271,6 +271,12 @@ p{
     
 }
 
+.containers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container3d{    
     width: 100%;    
     display: flex;
@@ -455,6 +461,12 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    margin-bottom: 10px;
 }
 
 #curriculoaside{
@@ -469,12 +481,17 @@ p{
 }
 
 footer{
-    background-color: var(--purple01);    
+    background-color: var(--purple01);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 50px;   
+    align-content: center;        
+    padding: 10px;        
 }
 
 address{
     display: flex;            
-    justify-content: center;
+    justify-content: center;        
     column-gap: 5%;        
 }
 
