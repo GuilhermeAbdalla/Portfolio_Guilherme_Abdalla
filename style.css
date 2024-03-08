@@ -155,7 +155,123 @@ p{
     font-family: "Outfit", sans-serif;
 }
 
-.container{    
+#portfoliolist{
+    > li{
+        color: gray;
+        [type="radio"]{
+            appearance: none;               
+        }        
+    }
+}
+
+[type="radio"] + label:hover{
+    cursor: pointer;
+    color: var(--green00);
+}
+
+[type="radio"]:checked + label{    
+    color: var(--green01);    
+    text-shadow: 0px 0px 20px var(--green01);    
+}
+
+#portfoliosection:has(#d3[type="radio"]:checked)
+{
+    .container3d{
+        visibility: visible;
+        transition: opacity 1s;        
+        position: relative;        
+        > div{
+            transition: 0.5s ease-in-out;
+        }
+    }
+
+    .containergamedev{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute; 
+        transform:translateX(-50%);
+        > div{
+            background-position: 20%;
+        }                         
+    }
+
+    .containerwebdev{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transform:translateX(-50%);
+        > div{
+            background-position: 20%;
+        }                  
+    }
+    
+}
+#portfoliosection:has(#gamedev[type="radio"]:checked)
+{    
+    .containergamedev{
+        visibility: visible;
+        transition: opacity 1s;       
+        position: relative;   
+        > div{
+            transition: 0.5s ease-in-out;
+        }     
+    }
+
+    .container3d{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;   
+        transform:translateX(-50%);
+        > div{
+            background-position: 20%;
+        }                  
+    }
+
+    .containerwebdev{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transform:translateX(-50%);
+        > div{
+            background-position: 20%;
+        }                  
+    }
+    
+}
+#portfoliosection:has(#webdev[type="radio"]:checked)
+{
+    .containerwebdev{
+        visibility: visible;
+        transition: opacity 1s;        
+        position: relative;
+        > div{
+            transition: 0.5s ease-in-out;
+        }
+    }
+
+    .containergamedev{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;  
+        transform:translateX(-50%);
+        > div{
+            background-position: 20%;
+        }                        
+    }
+
+    .container3d{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transform:translateX(-50%);
+        > div{
+            background-position: 20%;
+        }                  
+    }
+    
+}
+
+.container3d{    
     width: 100%;    
     display: flex;
     justify-content: center;
@@ -186,6 +302,116 @@ p{
         &:nth-of-type(4){
             background: #ffffff url("Imagens/imagem-carrossel-mushroom260x540-jpeg.jpg") no-repeat 100% / cover;
         }
+
+        .content{
+            font-size: 1.5rem;
+            color: var(--green00);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+            opacity: 0;
+            background: rgb(2,2,46);
+            background: linear-gradient(0deg, rgba(74, 8, 87, 0.699) 0%,
+            rgba(255, 125, 3, 0) 100%);
+            transform: translateY(100%);
+            transition: opacity 0.5s, ease-in-out, transform 0.5s 0.2s;
+            visibility: hidden;
+        }
+        
+        &:hover{
+            flex: 0 0 250px;
+            box-shadow: 0px 0px 50px var(--green01);            
+        }        
+
+        &:hover .content{
+            opacity: 1;
+            transform: translateY(0%);
+            visibility: visible;
+        }        
+    }
+}
+
+.containergamedev{    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    height: 500px;
+    gap: 10px;
+    > div{
+        border-radius: 20px;
+        background-color: blue;
+        @media screen and (min-width: 750px) {  
+            flex: 0 0 150px;
+        }  
+        flex: 0 0 20%; 
+        transition: 0.5s ease-in-out;     
+        cursor: pointer;  
+        box-shadow: 1px 5px 15px #1e0e3e; 
+        position: relative;
+        overflow: hidden;
+        &:nth-of-type(1){
+            background: #ffffff url("Imagens/imagem-carrossel-gamedev-slimetic-260x540-jpeg.jpg") no-repeat 50% / cover;
+        }        
+
+        .content{
+            font-size: 1.5rem;
+            color: var(--green00);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+            opacity: 0;
+            background: rgb(2,2,46);
+            background: linear-gradient(0deg, rgba(74, 8, 87, 0.699) 0%,
+            rgba(255, 125, 3, 0) 100%);
+            transform: translateY(100%);
+            transition: opacity 0.5s, ease-in-out, transform 0.5s 0.2s;
+            visibility: hidden;
+        }
+        
+        &:hover{
+            flex: 0 0 250px;
+            box-shadow: 0px 0px 50px var(--green01);            
+        }        
+
+        &:hover .content{
+            opacity: 1;
+            transform: translateY(0%);
+            visibility: visible;
+        }        
+    }
+}
+
+.containerwebdev{    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    height: 500px;
+    gap: 10px;
+    > div{
+        border-radius: 20px;
+        background-color: blue;
+        @media screen and (min-width: 750px) {  
+            flex: 0 0 150px;
+        }  
+        flex: 0 0 20%; 
+        transition: 0.5s ease-in-out;     
+        cursor: pointer;  
+        box-shadow: 1px 5px 15px #1e0e3e; 
+        position: relative;
+        overflow: hidden;
+        &:nth-of-type(1){
+            background: #ffffff url("Imagens/imagem-carrossel-webdev-meusite-260x540-jpeg.jpg") no-repeat 50% / cover;
+        }        
 
         .content{
             font-size: 1.5rem;
