@@ -35,6 +35,8 @@ main{
 #nome{
     font-family: "Fjalla One", sans-serif;
     letter-spacing: 7px;    
+    @media screen and (max-width: 1049px)}
+    }
 }
 
 header{
